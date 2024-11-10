@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Pollution - Effects</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #182b2f;
+      color: #fffefe;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #000000;
+      color: #fff;
+      padding: 15px 20px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    #span1 {
+      color: rgb(0, 0, 255);
+      font-size: larger;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #0400ff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #1a30f3;
+      color: #6087f4;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .effects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .effect {
+      background-color: #6265c4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 48%;
+      transition: all 0.3s ease;
+    }
+
+    .effect:hover {
+      background-color: #29cce1;
+      box-shadow: 0 4px 20px rgba(111, 6, 6, 0.2);
+    }
+
+    .effect h3 {
+      margin-bottom: 10px;
+      color: #000000;
+      font-size: 1.4rem;
+    }
+
+    .effect p {
+      color: #000000;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .effect img {
+      width: 250px; /* Fixed width */
+      height: 250px; /* Fixed height */
+      object-fit: cover; /* Ensures images cover the area without distortion */
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease; /* Smooth transition for the hover effect */
+    }
+
+    .effect img:hover {
+      transform: scale(1.1); /* Slightly enlarges the image */
+      box-shadow: 0 4px 15px rgba(249, 10, 10, 0.2); /* Adds a subtle shadow */
+      opacity: 0.9; /* Slightly reduces opacity */
+    }
+
+    .footer {
+      margin-top: auto;
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Hydro<span id="span1">Care</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="causes.html">Causes</a></li>
+        <li><a href="effects.html">Effects</a></li>
+        <li><a href="methodology.html">Solutions</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="compliant.html">Complaints</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2>Effects of Water Pollution</h2>
+    <div class="effects-list">
+      <!-- Effect 1 -->
+      <div class="effect">
+        <img src="https://i.pinimg.com/474x/57/4f/b6/574fb63d402d89f6e878793a6c2f2bba.jpg" alt="Health Effects">
+        <h3>Health Effects</h3>
+        <p>Water pollution has severe effects on human health, leading to diseases such as cholera, dysentery, and hepatitis. Long-term exposure can also result in cancer and neurological disorders.</p>
+      </div>
+
+      <!-- Effect 2 -->
+      <div class="effect">
+        <img src="https://i.pinimg.com/736x/36/f5/40/36f54081cf13c9553ce92604db4515f2.jpg" alt="Environmental Effects">
+        <h3>Environmental Effects</h3>
+        <p>Water pollution disrupts aquatic ecosystems, harming species and depleting oxygen levels in water bodies. Eutrophication leads to algal blooms, suffocating aquatic life.</p>
+      </div>
+
+      <!-- Effect 3 -->
+      <div class="effect">
+        <img src="https://i.pinimg.com/474x/c1/f6/b1/c1f6b14ae3f1a8865500ae4c26efc0d5.jpg" alt="Biodiversity Loss">
+        <h3>Biodiversity Loss</h3>
+        <p>Pollution can destroy habitats and reduce populations of species relying on clean water, further disrupting the ecological balance.</p>
+      </div>
+
+      <!-- Effect 4 -->
+      <div class="effect">
+        <img src="https://i.pinimg.com/474x/b5/50/45/b5504564ba91b87dbc2e3348c258980a.jpg" alt="Water Scarcity">
+        <h3>Water Scarcity</h3>
+        <p>Polluted water sources are no longer safe for consumption, contributing to water scarcity, especially in regions already struggling with limited resources.</p>
+      </div>
+
+      <!-- Effect 5 -->
+      <div class="effect">
+        <img src="https://i.pinimg.com/474x/da/9a/92/da9a9290559a4f736e7c7bd3595caef5.jpg" alt="Climate Change">
+        <h3>Climate Change</h3>
+        <p>Water pollution worsens the impacts of climate change by contaminating freshwater resources, making it harder to mitigate extreme weather events and rising temperatures.</p>
+      </div>
+    </div>
+
+    <!-- Additional Effects Link -->
+    <div class="links">
+      <p>Learn more about the effects of water pollution:</p>
+      <a href="https://www.who.int/health-topics/water-pollution" target="_blank">WHO</a> |
+      <a href="https://www.unep.org/resources/report/state-environmental-emergencies" target="_blank">UNEP</a> |
+      <a href="https://www.epa.gov/water-pollution" target="_blank">EPA</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 HydroCare. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

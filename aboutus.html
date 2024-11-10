@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #182b2f;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 15px 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #1a30f3;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #1a30f3;
+            color: #6087f4;
+        }
+        .about-section, .team-section, .contact-section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .about-section h1, .team-section h2, .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f6f9f9;
+        }
+        .about-section p, .contact-section p {
+            font-size: 1.1rem;
+            color: #fffcfc;
+        }
+        .team-profiles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .team-member {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .team-member:hover {
+            background-color: #e0f7fa;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .team-member h3 {
+            font-size: 1.2rem;
+            color: #000000;
+        }
+        .team-member a {
+            color: #1a30f3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+        .contact-section form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section input, .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .contact-section button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-section button:hover {
+            background-color: #0056b3;
+        }
+        .confirmation-message {
+            font-size: 1.1rem;
+            color: #00796b;
+            margin-top: 20px;
+            display: none;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hydro<span style="color: #1a30f3;">Care</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="methodology.html">Solutions</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="compliant.html">Complaints</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>We are dedicated to raising awareness about water pollution and providing solutions to preserve our precious water resources.</p>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-profiles">
+            <div class="team-member">
+                <img src="./favicon.png" alt="Aswin Pavithran">
+                <h3>Aswin Pavithran</h3>
+                <p>Connect with me on: <a href="http://www.linkedin.com/in/aswinpavithran000" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any complaints, inquiries, or suggestions, feel free to reach out to us.</p>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="confirmation-message" id="confirmation-message">Your message has been sent successfully. Thank you for reaching out!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HydroCare. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
